@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<head>
- <meta charset="utf-8">
- <script src="https://code.angularjs.org/1.6.0/angular.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+<html>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.js"></script>
 
- <link rel='stylesheet' href='style.css' />
- 
-</head>
 <body ng-app="myApp">
 
+<p><a href="#/!">Main</a></p>
 
-<!-- <div class="nav">
-    <a href="/">Main</a>
-    <a href="/london">London</a>
-    <a href="/paris">Paris</a>
-    <a href='/moscow'>Moscow</a>
-</div> -->
-  
-<div class="container">
-  <div ng-view></div>
-</div>
-</body>
+<a href="#!red">Red</a>
+<a href="#!green">Green</a>
+<a href="#!blue">Blue</a>
 
-<script src='app.js'>
+<div ng-view></div>
 
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.html"
+    })
+    .when("/red", {
+        templateUrl : "red.html"
+    })
+    .when("/green", {
+        templateUrl : "green.html"
+    })
+    .when("/blue", {
+        templateUrl : "<blue class="html"></blue>"
+    });
+});
 </script>
+
+<p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>
+</body>
+</html>
