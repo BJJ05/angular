@@ -7,9 +7,8 @@
 
 <p><a href="#/">Main</a></p>
 
-<a href="#/red">Red</a>
-<a href="#/green">Green</a>
-<a href="#/blue">Blue</a>
+<a href="#/london">London</a>
+<a href="#/paris">Paris</a>
 
 <div ng-view></div>
 
@@ -20,14 +19,11 @@ app.config(function($routeProvider) {
     .when("/", {
         templateUrl : "main.html"
     })
-    .when("/red", {
-        templateUrl : "red.html"
+    .when("/london", {
+        templateUrl : "london.html"
     })
-    .when("/green", {
-        templateUrl : "green.html"
-    })
-    .when("/blue", {
-        templateUrl : "blue.html"
+    .when("/paris", {
+        templateUrl : "paris.html"
     });
 });
 </script>
