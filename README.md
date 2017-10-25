@@ -1,6 +1,5 @@
-Foto list from https://pixabay.com/
+AngularJS App
 ===
-Using Pixiby API
 ---
-View page on https://bjj05.github.io/pixabayApi/
+View page on https://bjj05.github.io/angular/#!/
 ---
